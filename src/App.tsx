@@ -301,8 +301,12 @@ function App() {
                         src={`/logos/${imageHash}.png`}
                         style={{
                             filter: `blur(${
-                                isGameWon ? 0 : 21 - guesses.length * 7
-                            }px) ${isGameWon ? '' : 'grayscale(0.90)'}`,
+                                isGameWon || isGameLost
+                                    ? 0
+                                    : 21 - guesses.length * 7
+                            }px) ${
+                                isGameWon || isGameLost ? '' : 'grayscale(0.90)'
+                            }`,
                             transition: '0.3s all linear',
                         }}
                         className="pointer-events-none"
