@@ -60,7 +60,7 @@ export const Keyboard = ({
                             value={key}
                             key={key}
                             onClick={onClick}
-                            status={charStatuses[key]}
+                            status={undefined}
                             isRevealing={isRevealing}
                         />
                     )
@@ -72,7 +72,7 @@ export const Keyboard = ({
                         value={key}
                         key={key}
                         onClick={onClick}
-                        status={charStatuses[key]}
+                        status={undefined}
                         isRevealing={isRevealing}
                     />
                 ))}
@@ -86,7 +86,7 @@ export const Keyboard = ({
                         value={key}
                         key={key}
                         onClick={onClick}
-                        status={charStatuses[key]}
+                        status={undefined}
                         isRevealing={isRevealing}
                     />
                 ))}

@@ -62,24 +62,12 @@ export const StatsModal = ({
                                 {solution}
                             </p>
                             <p className="italic font-bold text-center text-gray-900 sm:px-1 text-md dark:text-gray-100">
-                                {WORDS_DESCRIPTION[solution.toLowerCase()]}*
+                                {WORDS_DESCRIPTION[solution.toUpperCase()]}
                             </p>
                         </div>
                         <div className="mt-6">
-                            <small className="dark:text-white">
-                                * Muchas definiciones son de{' '}
-                                <a
-                                    href="https://www.defilatam.com/definiciones"
-                                    target="_blank"
-                                    className="underline outline-none"
-                                    rel="noreferrer"
-                                >
-                                    DeFi Latam
-                                </a>{' '}
-                            </small>
-                            <br />
                             <small className="mb-4 outline-none dark:text-white">
-                                ** Para seguir aprendiendo de cripto sumate al{' '}
+                                * Para seguir aprendiendo de cripto sumate al{' '}
                                 <a
                                     href="https://discord.com/invite/kHvSC9WHzC"
                                     target="_blank"

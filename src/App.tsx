@@ -93,12 +93,23 @@ function App() {
     })
 
     const [stats, setStats] = useState(() => loadStats())
+    const [imageHash, setImageHash] = useState('')
 
     const [isHardMode, setIsHardMode] = useState(
         localStorage.getItem('gameMode')
             ? localStorage.getItem('gameMode') === 'hard'
             : false
     )
+
+    const hash = async (string: string) => {
+        const utf8 = new TextEncoder().encode(string)
+        const hashBuffer = await crypto.subtle.digest('SHA-256', utf8)
+        const hashArray = Array.from(new Uint8Array(hashBuffer))
+        const hashHex = hashArray
+            .map((bytes) => bytes.toString(16).padStart(2, '0'))
+            .join('')
+        return hashHex
+    }
 
     useEffect(() => {
         // if no game state on load,
@@ -108,6 +119,10 @@ function App() {
                 setIsInfoModalOpen(true)
             }, WELCOME_INFO_MODAL_MS)
         }
+        const initHash = async () => {
+            setImageHash(await hash(solution))
+        }
+        initHash()
     }, [])
 
     useEffect(() => {
@@ -302,8 +317,24 @@ function App() {
                 </div>
             </div>
             <p className="text-center dark:text-white navbar">
-                ¿Cuál es la palabra cripto de hoy?
+                ¿Cuál es el logo cripto de hoy?
             </p>
+            <div className="mt-6 mb-8 flex items-center justify-center">
+                {imageHash && (
+                    <img
+                        src={`/logos/${imageHash}.png`}
+                        style={{
+                            filter: `blur(${
+                                isGameWon ? 0 : 9 - guesses.length * 3
+                            }px)`,
+                            transition: '0.3s all linear',
+                        }}
+                        width={80}
+                        height={80}
+                        alt="Criptólogos"
+                    />
+                )}
+            </div>
             <div className="flex flex-col w-full px-1 pt-2 pb-8 mx-auto md:max-w-7xl sm:px-6 lg:px-8 grow">
                 <div className="pb-6 grow">
                     <Grid
@@ -311,6 +342,7 @@ function App() {
                         currentGuess={currentGuess}
                         isRevealing={isRevealing}
                         currentRowClassName={currentRowClass}
+                        isGameWon={isGameWon}
                     />
                 </div>
                 <Keyboard

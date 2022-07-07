@@ -23,7 +23,8 @@ export const shareStatus = (
         }/${MAX_CHALLENGES}${isHardMode ? '*' : ''}\n\n` +
         generateEmojiGrid(
             guesses,
-            getEmojiTiles(isDarkMode, isHighContrastMode)
+            getEmojiTiles(isDarkMode, isHighContrastMode),
+            lost
         ) +
         `\n\n${GAME_URL}`
 
@@ -46,22 +47,25 @@ export const shareStatus = (
     }
 }
 
-export const generateEmojiGrid = (guesses: string[], tiles: string[]) => {
+export const generateEmojiGrid = (
+    guesses: string[],
+    tiles: string[],
+    isGameLost: boolean
+) => {
     return guesses
-        .map((guess) => {
+        .map((guess, i) => {
             const status = getGuessStatuses(guess)
             const splitGuess = unicodeSplit(guess)
-
+            if (guesses.length - 1 === i && !isGameLost) {
+                return splitGuess
+                    .map((_) => {
+                        return tiles[0]
+                    })
+                    .join('')
+            }
             return splitGuess
-                .map((_, i) => {
-                    switch (status[i]) {
-                        case 'correct':
-                            return tiles[0]
-                        case 'present':
-                            return tiles[1]
-                        default:
-                            return tiles[2]
-                    }
+                .map((_) => {
+                    return tiles[2]
                 })
                 .join('')
         })

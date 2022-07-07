@@ -8,6 +8,7 @@ type Props = {
     currentGuess: string
     isRevealing?: boolean
     currentRowClassName: string
+    isGameWon: boolean
 }
 
 export const Grid = ({
@@ -15,6 +16,7 @@ export const Grid = ({
     currentGuess,
     isRevealing,
     currentRowClassName,
+    isGameWon,
 }: Props) => {
     const empties =
         guesses.length < MAX_CHALLENGES - 1
@@ -27,6 +29,11 @@ export const Grid = ({
                 <CompletedRow
                     key={i}
                     guess={guess}
+                    cellStatus={
+                        guesses.length - 1 === i && isGameWon
+                            ? 'correct'
+                            : 'absent'
+                    }
                     isRevealing={isRevealing && guesses.length - 1 === i}
                 />
             ))}
