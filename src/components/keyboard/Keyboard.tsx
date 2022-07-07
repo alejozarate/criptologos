@@ -1,4 +1,3 @@
-import { getStatuses } from '../../lib/statuses'
 import { Key } from './Key'
 import { useEffect } from 'react'
 import { ENTER_TEXT, DELETE_TEXT } from '../../constants/strings'
@@ -19,8 +18,6 @@ export const Keyboard = ({
     guesses,
     isRevealing,
 }: Props) => {
-    const charStatuses = getStatuses(guesses)
-
     const onClick = (value: string) => {
         if (value === 'ENTER') {
             onEnter()

@@ -1,4 +1,3 @@
-import { getGuessStatuses } from './statuses'
 import { solutionIndex, unicodeSplit } from './words'
 import { GAME_TITLE, GAME_URL } from '../constants/strings'
 import { MAX_CHALLENGES } from '../constants/settings'
@@ -54,7 +53,6 @@ export const generateEmojiGrid = (
 ) => {
     return guesses
         .map((guess, i) => {
-            const status = getGuessStatuses(guess)
             const splitGuess = unicodeSplit(guess)
             if (guesses.length - 1 === i && !isGameLost) {
                 return splitGuess

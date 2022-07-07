@@ -1,10 +1,9 @@
-import { useState, useEffect, useContext } from 'react'
+import { useState, useEffect } from 'react'
 import { Grid } from './components/grid/Grid'
 import { Keyboard } from './components/keyboard/Keyboard'
 import { InfoModal } from './components/modals/InfoModal'
 import { StatsModal } from './components/modals/StatsModal'
 import { SettingsModal } from './components/modals/SettingsModal'
-import { RankingModal } from './components/modals/RankingModal'
 
 import {
     WIN_MESSAGES,
@@ -42,11 +41,8 @@ import './App.css'
 import { AlertContainer } from './components/alerts/AlertContainer'
 import { useAlert } from './context/AlertContext'
 import { Navbar } from './components/navbar/Navbar'
-import { updateScore } from './lib/firebaseActions'
-import { TwitterCtx } from './context/TwitterContext'
 
 function App() {
-    const twitterContext = useContext(TwitterCtx)
     const prefersDarkMode = window.matchMedia(
         '(prefers-color-scheme: dark)'
     ).matches
@@ -57,11 +53,9 @@ function App() {
     const [isGameWon, setIsGameWon] = useState(false)
     const [isInfoModalOpen, setIsInfoModalOpen] = useState(false)
     const [isStatsModalOpen, setIsStatsModalOpen] = useState(false)
-    const [isRankingModalOpen, setIsRankingModalOpen] = useState(false)
     const [isSettingsModalOpen, setIsSettingsModalOpen] = useState(false)
     const [currentRowClass, setCurrentRowClass] = useState('')
     const [isGameLost, setIsGameLost] = useState(false)
-    const [isTwitterEnabled, setIsTwitterEnabled] = useState(false)
     const [isDarkMode, setIsDarkMode] = useState(
         localStorage.getItem('theme')
             ? localStorage.getItem('theme') === 'dark'
@@ -149,21 +143,10 @@ function App() {
             guesses.length === 0 ||
             localStorage.getItem('gameMode') === 'hard'
         ) {
-            setIsHardMode(isHard)
-            localStorage.setItem('gameMode', isHard ? 'hard' : 'normal')
+            setIsHardMode(false)
+            localStorage.setItem('gameMode', false ? 'hard' : 'normal')
         } else {
             showErrorAlert(HARD_MODE_ALERT_MESSAGE)
-        }
-    }
-
-    const handleTwitterUser = (isTwitterEnabled: boolean) => {
-        setIsTwitterEnabled(isTwitterEnabled)
-        if (isTwitterEnabled) {
-            twitterContext?.twitterSignIn()
-        }
-
-        if (!isTwitterEnabled) {
-            twitterContext?.twitterSignOut()
         }
     }
 
@@ -198,10 +181,6 @@ function App() {
             }, GAME_LOST_INFO_DELAY)
         }
     }, [isGameWon, isGameLost, showSuccessAlert])
-
-    useEffect(() => {
-        setIsTwitterEnabled(twitterContext?.authenticated ? true : false)
-    }, [twitterContext?.authenticated])
 
     const onChar = (value: string) => {
         if (
@@ -273,7 +252,6 @@ function App() {
             setCurrentGuess('')
 
             if (winningWord) {
-                updateScore(guesses.length)
                 setStats(addStatsForCompletedGame(stats, guesses.length))
                 return setIsGameWon(true)
             }
@@ -281,7 +259,6 @@ function App() {
             if (guesses.length === MAX_CHALLENGES - 1) {
                 setStats(addStatsForCompletedGame(stats, guesses.length + 1))
                 setIsGameLost(true)
-                updateScore(6)
                 showErrorAlert(CORRECT_WORD_MESSAGE(solution), {
                     persist: true,
                     delayMs: REVEAL_TIME_MS * MAX_WORD_LENGTH + 1,
@@ -295,7 +272,6 @@ function App() {
             <Navbar
                 setIsInfoModalOpen={setIsInfoModalOpen}
                 setIsStatsModalOpen={setIsStatsModalOpen}
-                setIsRankingModalOpen={setIsRankingModalOpen}
                 setIsSettingsModalOpen={setIsSettingsModalOpen}
             />
             <div className="items-center mb-4 text-xl font-bold text-center sm:hidden dark:text-white">
@@ -317,20 +293,21 @@ function App() {
                 </div>
             </div>
             <p className="text-center dark:text-white navbar">
-                ¿Cuál es el logo cripto de hoy?
+                ¿Cuál es el símbolo del logo cripto de hoy?
             </p>
-            <div className="mt-6 mb-8 flex items-center justify-center">
+            <div className="mt-6 mb-12 flex items-center justify-center">
                 {imageHash && (
                     <img
                         src={`/logos/${imageHash}.png`}
                         style={{
                             filter: `blur(${
-                                isGameWon ? 0 : 9 - guesses.length * 3
-                            }px)`,
+                                isGameWon ? 0 : 21 - guesses.length * 7
+                            }px) ${isGameWon ? '' : 'grayscale(0.90)'}`,
                             transition: '0.3s all linear',
                         }}
-                        width={80}
-                        height={80}
+                        className="pointer-events-none"
+                        width={220}
+                        height={220}
                         alt="Criptólogos"
                     />
                 )}
@@ -380,12 +357,6 @@ function App() {
                     handleDarkMode={handleDarkMode}
                     isHighContrastMode={isHighContrastMode}
                     handleHighContrastMode={handleHighContrastMode}
-                    isTwitterEnabled={isTwitterEnabled}
-                    handleTwitterUser={handleTwitterUser}
-                />
-                <RankingModal
-                    isOpen={isRankingModalOpen}
-                    handleClose={() => setIsRankingModalOpen(false)}
                 />
 
                 <AlertContainer />

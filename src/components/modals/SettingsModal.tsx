@@ -1,10 +1,6 @@
 import { BaseModal } from './BaseModal'
 import { SettingsToggle } from './SettingsToggle'
-import {
-    HARD_MODE_DESCRIPTION,
-    HIGH_CONTRAST_MODE_DESCRIPTION,
-    TWITTER_ACCOUNT_DESCRIPTION,
-} from '../../constants/strings'
+import { HIGH_CONTRAST_MODE_DESCRIPTION } from '../../constants/strings'
 
 type Props = {
     isOpen: boolean
@@ -15,21 +11,15 @@ type Props = {
     handleDarkMode: Function
     isHighContrastMode: boolean
     handleHighContrastMode: Function
-    isTwitterEnabled: boolean
-    handleTwitterUser: Function
 }
 
 export const SettingsModal = ({
     isOpen,
     handleClose,
-    isHardMode,
-    handleHardMode,
     isDarkMode,
     handleDarkMode,
     isHighContrastMode,
     handleHighContrastMode,
-    isTwitterEnabled,
-    handleTwitterUser,
 }: Props) => {
     return (
         <BaseModal
@@ -38,12 +28,6 @@ export const SettingsModal = ({
             handleClose={handleClose}
         >
             <div className="flex flex-col mt-2 divide-y">
-                <SettingsToggle
-                    settingName="Modo difícil"
-                    flag={isHardMode}
-                    handleFlag={handleHardMode}
-                    description={HARD_MODE_DESCRIPTION}
-                />
                 <SettingsToggle
                     settingName="Modo oscuro"
                     flag={isDarkMode}
@@ -54,12 +38,6 @@ export const SettingsModal = ({
                     flag={isHighContrastMode}
                     handleFlag={handleHighContrastMode}
                     description={HIGH_CONTRAST_MODE_DESCRIPTION}
-                />
-                <SettingsToggle
-                    settingName="Twitter linkeado"
-                    flag={isTwitterEnabled}
-                    handleFlag={handleTwitterUser}
-                    description={TWITTER_ACCOUNT_DESCRIPTION}
                 />
             </div>
         </BaseModal>
