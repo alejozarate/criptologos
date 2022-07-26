@@ -22,4 +22,7 @@ export const WORDS_DESCRIPTION: StringMap = {
     CVX: 'CVX es un protocolo construido sobre Curve, el mayor DEX de stablecoins del mercado. Permite a los inversores obtener rendimientos extra en CVX depositando liquidez en Curve a través de Convex.',
     WAVES: 'Es una blockchain Proof of Stake centrada en ofrecer financiación a proyectos y startups. A diferencia de Ethereum, los smart contracts de Waves no son Touring Complete, por lo que permiten construir aplicaciones mucho más limitadas. Quizá "Touring Complete" sea una buena palabra para otro día de Criptdle...',
     ATOM: 'ATOM es el token de Cosmos, un ecosistema de blockchains interoperables. En lugar de una super blockchain que ejecute millones de transacciones, Cosmos creó un framework para que sea fácil crear muchas blockchains y conectarlas entre sí. ',
+    MIR: 'Un protocolo icónico del auge y caída de Terra. Permite emitir tokens que reflejan el precio de una acción del mundo real.',
+    MINA: 'Mina es una blockchain que usa SNARKs (una forma de Zero Knowledge Proof) para reducir la cantidad de información guardada en la blockchain. Esto es importante porque hace que correr un nodo sea más fácil; no hace falta una super compu para guardar miles de gigas, lo cual permite que más personas tengan un nodo y la red sea más descentralizada.',
+    GRT: 'The graph es el Google de Web3. Indexa y organiza la información para que sea más rápido y barato acceder a información dentro de la blockchain. Pero lo más interesante es el mecanismo de incentivos que tienen. Conocelo en Solow.io.',
 }
