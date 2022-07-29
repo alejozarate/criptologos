@@ -1,4 +1,7 @@
 export const WORDS = [
+    'LINK',
+    'BUSD',
+    'NEAR', // This logo has already appeared
     //'ANC',
     //'OPENSEA',
     //'BNB',
@@ -14,9 +17,6 @@ export const WORDS = [
     'MIR',
     'MINA',
     'GRT',
-    'LINK',
-    'BUSD',
-    'NEAR',
     //'DOT',
     //'BTC',
     //'SOL',
