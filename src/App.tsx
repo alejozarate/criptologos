@@ -43,13 +43,12 @@ import { useAlert } from './context/AlertContext'
 import { Navbar } from './components/navbar/Navbar'
 
 function App() {
-    const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)')
-        .matches
+    const prefersDarkMode = window.matchMedia(
+        '(prefers-color-scheme: dark)'
+    ).matches
 
-    const {
-        showError: showErrorAlert,
-        showSuccess: showSuccessAlert,
-    } = useAlert()
+    const { showError: showErrorAlert, showSuccess: showSuccessAlert } =
+        useAlert()
     const [currentGuess, setCurrentGuess] = useState('')
     const [isGameWon, setIsGameWon] = useState(false)
     const [isInfoModalOpen, setIsInfoModalOpen] = useState(false)
@@ -296,7 +295,7 @@ function App() {
             <p className="text-center dark:text-white navbar">
                 ¿Cuál es el símbolo del logo cripto de hoy?
             </p>
-            <div className="mt-6 mb-12 flex items-center justify-center">
+            <div className="flex items-center justify-center mt-6 mb-12">
                 {imageHash && (
                     <img
                         src={`/logos/${imageHash}.png`}
