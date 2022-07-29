@@ -1,7 +1,7 @@
 export const WORDS = [
-    'ANC',
-    'OPENSEA',
-    'BNB',
+    //'ANC',
+    //'OPENSEA',
+    //'BNB',
     'SAND',
     'ALGO',
     'GLMR',
@@ -14,6 +14,9 @@ export const WORDS = [
     'MIR',
     'MINA',
     'GRT',
+    'LINK',
+    'BUSD',
+    'NEAR'
     //'DOT',
     //'BTC',
     //'SOL',
