@@ -16,7 +16,7 @@ export const WORDS = [
     'GRT',
     'LINK',
     'BUSD',
-    'NEAR'
+    'NEAR',
     //'DOT',
     //'BTC',
     //'SOL',

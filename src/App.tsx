@@ -43,12 +43,13 @@ import { useAlert } from './context/AlertContext'
 import { Navbar } from './components/navbar/Navbar'
 
 function App() {
-    const prefersDarkMode = window.matchMedia(
-        '(prefers-color-scheme: dark)'
-    ).matches
+    const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)')
+        .matches
 
-    const { showError: showErrorAlert, showSuccess: showSuccessAlert } =
-        useAlert()
+    const {
+        showError: showErrorAlert,
+        showSuccess: showSuccessAlert,
+    } = useAlert()
     const [currentGuess, setCurrentGuess] = useState('')
     const [isGameWon, setIsGameWon] = useState(false)
     const [isInfoModalOpen, setIsInfoModalOpen] = useState(false)

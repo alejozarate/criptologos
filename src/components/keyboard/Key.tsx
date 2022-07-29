@@ -28,8 +28,7 @@ export const Key = ({
         'flex items-center justify-center rounded mx-0.5 text-xs font-bold cursor-pointer select-none dark:text-white',
         {
             'transition ease-in-out': isRevealing,
-            'bg-slate-200 dark:bg-slate-600 hover:bg-slate-300 active:bg-slate-400':
-                !status,
+            'bg-slate-200 dark:bg-slate-600 hover:bg-slate-300 active:bg-slate-400': !status,
             'bg-slate-400 dark:bg-slate-800 text-white': status === 'absent',
             'bg-orange-500 hover:bg-orange-600 active:bg-orange-700 text-white':
                 status === 'correct' && isHighContrast,
