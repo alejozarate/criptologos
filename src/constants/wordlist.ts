@@ -1,7 +1,8 @@
 export const WORDS = [
     'LINK',
     'BUSD',
-    'NEAR', // This logo has already appeared
+    'ZIL',
+    //'NEAR',
     //'ANC',
     //'OPENSEA',
     //'BNB',

@@ -29,4 +29,5 @@ export const WORDS_DESCRIPTION: StringMap = {
     ZAPPER: 'Zapper es una herramienta para interactuar con web3. Empezó siendo simplemente un dashboard para llevar un registro de tus wallets pero de a poco incorporó funciones para interactuar con cripto directamente desde su interfaz. Incluye NFTs, DeFi y DAOs en varias redes.',
     BUSD: 'BUSD es la stablecoin de Binance, emitida por Paxos con respaldo 1 a 1 con dólares en reserva. Lo curioso es que los BUSD originales son emitidos sobre Ethereum (ERC-20). Binance crea BUSD nativos a la BSC holdeando BUSD ERC-20 como reserva en un contrato sobre Ethereum. ',
     NEAR: 'Near es una blockchain Layer 1 que usa sharding para lograr mayor escalabilidad. La blockchain actúa como un protocolo sobre el cual se pueden construir distintas soluciones, incluídas blockchains de capa 2 con distintas funcionalidades.',
+    ZIL: 'Ziliqa es una blockchain con una tecnología muy curiosa: utiliza un mecanismo de consenso que combina proof-of-work y pBFT al mismo tiempo que aplica sharding al procesamiento de la información. Permite contratos inteligentes escritos en un lenguaje de programación propio: Scilla. ',
 }
