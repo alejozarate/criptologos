@@ -30,4 +30,8 @@ export const WORDS_DESCRIPTION: StringMap = {
     BUSD: 'BUSD es la stablecoin de Binance, emitida por Paxos con respaldo 1 a 1 con dólares en reserva. Lo curioso es que los BUSD originales son emitidos sobre Ethereum (ERC-20). Binance crea BUSD nativos a la BSC holdeando BUSD ERC-20 como reserva en un contrato sobre Ethereum. ',
     NEAR: 'Near es una blockchain Layer 1 que usa sharding para lograr mayor escalabilidad. La blockchain actúa como un protocolo sobre el cual se pueden construir distintas soluciones, incluídas blockchains de capa 2 con distintas funcionalidades.',
     ZIL: 'Ziliqa es una blockchain con una tecnología muy curiosa: utiliza un mecanismo de consenso que combina proof-of-work y pBFT al mismo tiempo que aplica sharding al procesamiento de la información. Permite contratos inteligentes escritos en un lenguaje de programación propio: Scilla. ',
+    SLP: 'Es el token emblema de Axie Infinity, ya que se usa para pagar a los jugadores del primer gran play-to-earn del ecosistema cripto. No debe confundirse con AXS, que es el token que se usa para la gobernanza de Axie.',
+    LUNA: 'Bueno... Luna, Luna Classic, es todo muy confuso. Luna Classic es la moneda original del ecosistema Terra, que fue "reemplazada" por Luna (2.0) luego de, literalmente, irse a cero.',
+    EXACTLY:
+        'Exactly es un proyecto con fundadores argentinos que apunta a permitir renta fija en DeFi. Cuando pedís o das un préstamo en AAVE o Compound, la tasa es variable. Exactly desarrolló un novedoso sistema de tasas y pooles de liquidez que permite ofrecer tanto renta variable como fija.',
 }
