@@ -34,4 +34,5 @@ export const WORDS_DESCRIPTION: StringMap = {
     LUNA: 'Bueno... Luna, Luna Classic, es todo muy confuso. Luna Classic es la moneda original del ecosistema Terra, que fue "reemplazada" por Luna (2.0) luego de, literalmente, irse a cero.',
     EXACTLY:
         'Exactly es un proyecto con fundadores argentinos que apunta a permitir renta fija en DeFi. Cuando pedís o das un préstamo en AAVE o Compound, la tasa es variable. Exactly desarrolló un novedoso sistema de tasas y pooles de liquidez que permite ofrecer tanto renta variable como fija.',
+    CHZ: 'Chiliz apunta a unir el mundo cripto con el deporte, permitiendo que equipos de distintos deportes emitan sus propios tokens, NFTs y productos deportivos. Es una blockchain que funciona con Proof-of-Authority y depende de la empresa socios.com. Instituciones como la Juventus o el PSG ya emitieron sus tokens usando Chiliz. ¿Una buena apuesta antes del mundial? NFA',
 }
