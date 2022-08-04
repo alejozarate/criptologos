@@ -35,4 +35,7 @@ export const WORDS_DESCRIPTION: StringMap = {
     EXACTLY:
         'Exactly es un proyecto con fundadores argentinos que apunta a permitir renta fija en DeFi. Cuando pedís o das un préstamo en AAVE o Compound, la tasa es variable. Exactly desarrolló un novedoso sistema de tasas y pooles de liquidez que permite ofrecer tanto renta variable como fija.',
     CHZ: 'Chiliz apunta a unir el mundo cripto con el deporte, permitiendo que equipos de distintos deportes emitan sus propios tokens, NFTs y productos deportivos. Es una blockchain que funciona con Proof-of-Authority y depende de la empresa socios.com. Instituciones como la Juventus o el PSG ya emitieron sus tokens usando Chiliz. ¿Una buena apuesta antes del mundial? NFA',
+    ZERION: 'Zerion es un dashboard web3 que simplifica la interacción con proyectos DeFi y el seguimiento de tus wallets. Tiene swaps, bridges y varias funcionalidades más incorporadas.',
+    FTT: 'FTT es el token de FTX, uno de los exchanges más importantes del mundo. Otorga distintos beneficios a quienes utilizan productos del ecosistema FTX',
+    BCH: 'BCH nace del primer hard fork que sufre Bitcoin, luego de las llamadas guerras de escalabilidad. BCH ajusta algunos parámetros de Bitcoin para lograr mayor escalabilidad. Es una red que no tuvo mucho apoyo de la comunidad y hoy no se usa demasiado.',
 }
