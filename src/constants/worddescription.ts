@@ -39,4 +39,6 @@ export const WORDS_DESCRIPTION: StringMap = {
     FTT: 'FTT es el token de FTX, uno de los exchanges más importantes del mundo. Otorga distintos beneficios a quienes utilizan productos del ecosistema FTX',
     BCH: 'BCH nace del primer hard fork que sufre Bitcoin, luego de las llamadas guerras de escalabilidad. BCH ajusta algunos parámetros de Bitcoin para lograr mayor escalabilidad. Es una red que no tuvo mucho apoyo de la comunidad y hoy no se usa demasiado.',
     FTM: 'Fantom no es una blockchain. En realidad es una DLT. En la práctica, no hay muchas diferencias para el usuario final. Es EVM compatible y tiene un mecanismo de consenso Proof-of-Stake, basado en FTM.',
+    ELEMENT:
+        'Element es un proyecto la diferencia de precio entre ETH y stETH para ofrecer una tasa fija. Si uno compra stETH lockeado por 1 año a 0.95 ETH, quiere decir que ganará aproximadamente un 5% si espera un año, por lo que es comparable a una tasa de interés fija.',
 }
