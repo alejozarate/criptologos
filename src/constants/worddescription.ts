@@ -41,4 +41,5 @@ export const WORDS_DESCRIPTION: StringMap = {
     FTM: 'Fantom no es una blockchain. En realidad es una DLT. En la práctica, no hay muchas diferencias para el usuario final. Es EVM compatible y tiene un mecanismo de consenso Proof-of-Stake, basado en FTM.',
     ELEMENT:
         'Element es un proyecto la diferencia de precio entre ETH y stETH para ofrecer una tasa fija. Si uno compra stETH lockeado por 1 año a 0.95 ETH, quiere decir que ganará aproximadamente un 5% si espera un año, por lo que es comparable a una tasa de interés fija.',
+    AVAX: 'Avalanche es una blockchain de tercera generación que apunta a generar un ecosistema de blockchains específicas. El objetivo es que crear una nueva blockchain sea tan fácil como crear una dapp en Ethereum, para que programadores de todo el mundo puedan construir blockchains adaptadas a las necesidades específicas de sus ideas.',
 }
