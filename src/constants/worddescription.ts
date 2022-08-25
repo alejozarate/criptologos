@@ -42,4 +42,5 @@ export const WORDS_DESCRIPTION: StringMap = {
     ELEMENT:
         'Element es un proyecto la diferencia de precio entre ETH y stETH para ofrecer una tasa fija. Si uno compra stETH lockeado por 1 año a 0.95 ETH, quiere decir que ganará aproximadamente un 5% si espera un año, por lo que es comparable a una tasa de interés fija.',
     AVAX: 'Avalanche es una blockchain de tercera generación que apunta a generar un ecosistema de blockchains específicas. El objetivo es que crear una nueva blockchain sea tan fácil como crear una dapp en Ethereum, para que programadores de todo el mundo puedan construir blockchains adaptadas a las necesidades específicas de sus ideas.',
+    RUNE: 'THORChain es una red layer 1 que funciona como un exchange descentralizado. El objetivo es permitir la liquidez crosschain, evitando la necesidad de usar bridges. Fue construída usando el Cosmos SDK y su algoritmo Tendermint.',
 }
