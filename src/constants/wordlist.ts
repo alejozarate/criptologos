@@ -1,7 +1,8 @@
 export const WORDS = [
     'LINK',
     'BUSD',
-    'ZIL',
+    'KDA',
+    //'ZIL',
     'SLP',
     'EXACTLY',
     'CHZ',
