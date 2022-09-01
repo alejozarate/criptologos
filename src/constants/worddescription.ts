@@ -47,4 +47,5 @@ export const WORDS_DESCRIPTION: StringMap = {
     ADA: 'Cardano es una blockchain proof of stake que apunta a resolver los problemas de escalabilidad de Ethereum. Su fundador es Charles Hoskinson y la moneda es ADA. Tiene una comunidad muy fuerte a pesar de que la red aún está en una etapa muy inicial y ha tenido varios problemas técnicos.',
     APE: 'ApeCoin. Es la moneda de la Bored Apes Yatch Club DAO y seguramente tendrá distintos usos en los productos desarrollados por Yuga Labs, la empresa detrás de los famosos Bored Apes. Un ejemplo es Otherside, el metaverso que están construyendo y que saturó Ethereum con su lanzamiento hace unos meses.',
     KDA: 'Kadena es un proyecto muy centrado en dos puntos: ofrecer una alta escalabilidad y un potente lenguaje de smart contracts para realizar dApps extremadamente eficientes. Ambas cosas van de la mano porque el fin de Kadena es ofrecer la oportunidad de construir dApps de alcance global y de uso masivo a las empresas e interesados.',
+    BELO: 'Belo es una app que permite comprar cripto en pesos de forma simple y rápida.',
 }
