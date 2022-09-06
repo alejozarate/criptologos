@@ -49,4 +49,5 @@ export const WORDS_DESCRIPTION: StringMap = {
     KDA: 'Kadena es un proyecto muy centrado en dos puntos: ofrecer una alta escalabilidad y un potente lenguaje de smart contracts para realizar dApps extremadamente eficientes. Ambas cosas van de la mano porque el fin de Kadena es ofrecer la oportunidad de construir dApps de alcance global y de uso masivo a las empresas e interesados.',
     BELO: 'Belo es una app que permite comprar cripto en pesos de forma simple y rápida.',
     BAT: 'BAT es el token con el que Brave paga a sus usuarios que deciden mirar anuncios. Viene de "Basic Attention Token" y nace de la idea de que el usuario pueda monetizar el tiempo que dedica a ver publicidad, en lugar de convertirse en el producto de una gran plataforma centralizada.',
+    FIL: 'Es una red de almacenamiento descentralizado. La idea es que cualquiera pueda ofrecer su hardware para almacenar información y recibir recompensas a cambio de eso.',
 }
