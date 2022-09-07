@@ -50,4 +50,5 @@ export const WORDS_DESCRIPTION: StringMap = {
     BELO: 'Belo es una app que permite comprar cripto en pesos de forma simple y rápida.',
     BAT: 'BAT es el token con el que Brave paga a sus usuarios que deciden mirar anuncios. Viene de "Basic Attention Token" y nace de la idea de que el usuario pueda monetizar el tiempo que dedica a ver publicidad, en lugar de convertirse en el producto de una gran plataforma centralizada.',
     FIL: 'Es una red de almacenamiento descentralizado. La idea es que cualquiera pueda ofrecer su hardware para almacenar información y recibir recompensas a cambio de eso.',
+    CRV: 'Es el token de Curve, el DEX de stablecoins más grande del mundo. Es un token icónico a partir de las Curve wars. Resulta que los tenedores de CRV puedend decidir como utilizar la liquidez del protocolo, por lo que varios proyectos luchan por ganar control sobre el token.',
 }
