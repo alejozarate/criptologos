@@ -53,4 +53,5 @@ export const WORDS_DESCRIPTION: StringMap = {
     CRV: 'Es el token de Curve, el DEX de stablecoins más grande del mundo. Es un token icónico a partir de las Curve wars. Resulta que los tenedores de CRV puedend decidir como utilizar la liquidez del protocolo, por lo que varios proyectos luchan por ganar control sobre el token.',
     ONE: 'ONE es el token nativo de Harmony, una blockchain layer 1 que utiliza sharding para aumentar la escalabilidad de la red.',
     UST: 'UST era la principal stablecoin del ecosistema Terra. Su valor tenia una paridad de 1 a 1 con el dólar y estaba respaldado por un sistema algorítmico de quema y emisión de Luna. Ante una caída abrupta de Luna, entro en un "espiral de la muerte" y termino literalmente yendose a 0. Había alcanzado una capitalización de mercado de más de 10BN USD, por lo que su caída repentina fue un golpe duro para el mundo cripto.',
+    BCASH: 'BCASH nace del primer hard fork que sufre Bitcoin, luego de las llamadas guerras de escalabilidad. BCASH ajusta algunos parámetros de Bitcoin para lograr mayor escalabilidad. Es una red que no tuvo mucho apoyo de la comunidad y hoy no se usa demasiado.',
 }

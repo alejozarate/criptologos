@@ -1,5 +1,6 @@
 export const WORDS = [
-    'LINK',
+    'BCASH',
+    //'LINK',
     'BUSD',
     'KDA',
     //'ZIL',
