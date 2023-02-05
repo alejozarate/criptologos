@@ -4,8 +4,6 @@ import { Keyboard } from './components/keyboard/Keyboard'
 import { InfoModal } from './components/modals/InfoModal'
 import { StatsModal } from './components/modals/StatsModal'
 import { SettingsModal } from './components/modals/SettingsModal'
-import { updateScore } from './lib/firebaseActions'
-import { RankingModal } from './components/modals/RankingModal'
 
 import {
     WIN_MESSAGES,
@@ -305,7 +303,6 @@ function App() {
                 setIsStatsModalOpen={setIsStatsModalOpen}
                 setIsRankingModalOpen={setIsRankingModalOpen}
                 setIsSettingsModalOpen={setIsSettingsModalOpen}
-                setIsRankingModalOpen={setIsRankingModalOpen}
             />
             <div className="items-center mb-4 text-xl font-bold text-center sm:hidden dark:text-white">
                 <div className="flex justify-center">
