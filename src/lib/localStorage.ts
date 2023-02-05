@@ -26,6 +26,37 @@ export type GameStats = {
     successRate: number
 }
 
+const UNSTOPPABLE_DATA_KEY = 'unstoppableData'
+
+export type unstoppableObject = {
+    displayName: string | null
+    uid: string | null
+}
+
+export const saveUnstoppableUserToLocalStorage = (
+    unstoppableUser: unstoppableObject
+) => {
+    const { displayName, uid } = unstoppableUser
+
+    const objectData = {
+        displayName,
+        uid,
+    }
+
+    localStorage.setItem(UNSTOPPABLE_DATA_KEY, JSON.stringify(objectData))
+}
+
+export const deleteUnstoppableUserFromLocalStorage = () => {
+    localStorage.removeItem(UNSTOPPABLE_DATA_KEY)
+}
+
+export const getUnstoppableUser = () => {
+    const unstoppableUserLocal = JSON.parse(
+        localStorage.getItem(UNSTOPPABLE_DATA_KEY) || '{}'
+    )
+    return unstoppableUserLocal
+}
+
 export type twitterObject = {
     displayName: string | null
     uid: string | null

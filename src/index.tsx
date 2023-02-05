@@ -4,11 +4,14 @@ import './index.css'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
 import { AlertProvider } from './context/AlertContext'
+import { UnstoppableProvider } from './context/UnstoppableContext'
 
 ReactDOM.render(
     <React.StrictMode>
         <AlertProvider>
-            <App />
+            <UnstoppableProvider>
+                <App />
+            </UnstoppableProvider>
         </AlertProvider>
     </React.StrictMode>,
     document.getElementById('root')
