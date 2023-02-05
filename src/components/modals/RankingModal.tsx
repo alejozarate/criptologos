@@ -17,13 +17,13 @@ export const RankingModal = ({ isOpen, handleClose }: Props) => {
     const [ranking, setRanking] = useState<rankeredUser[]>([])
     const [page, setPage] = useState(1)
     const [renderedRanking, setRenderedRanking] = useState<rankeredUser[]>([])
-    const pageQty = 1
 
     useEffect(() => {
         getRanking()
             .then((ranking) => {
                 setRanking(ranking)
                 //setPageQty(Math.ceil(ranking.length / MAX_QTY_USERS_PER_PAGE))
+                // setPageQty(Math.ceil(ranking.length / MAX_QTY_USERS_PER_PAGE))
             })
             .catch((e) => {
                 alert(e)
@@ -32,10 +32,9 @@ export const RankingModal = ({ isOpen, handleClose }: Props) => {
 
     useEffect(() => {
         const handlePagination = () => {
-            // const start = (page - 1) * MAX_QTY_USERS_PER_PAGE
-            // const end = page * MAX_QTY_USERS_PER_PAGE
-            // setRenderedRanking(ranking.slice(start, end))
-            setRenderedRanking(ranking)
+            const start = (page - 1) * MAX_QTY_USERS_PER_PAGE
+            const end = page * MAX_QTY_USERS_PER_PAGE
+            setRenderedRanking(ranking.slice(start, end))
         }
         handlePagination()
     }, [ranking, page])
@@ -97,7 +96,6 @@ export const RankingModal = ({ isOpen, handleClose }: Props) => {
                             <button
                                 className="col-start-2 col-end-3 px-2 py-1 font-bold text-white bg-blue-500 rounded hover:bg-blue-700 disabled:opacity-75"
                                 onClick={() => setPage(page + 1)}
-                                disabled={page >= pageQty}
                             >
                                 {NEXT_PAGINATION_TEXT}
                             </button>
