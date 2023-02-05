@@ -7,7 +7,7 @@ import {
     getDocs,
     collection,
 } from 'firebase/firestore'
-import { getTwitterUser, getUnstoppableUser } from './localStorage'
+import { getUnstoppableUser } from './localStorage'
 
 interface dataUser {
     displayName: string

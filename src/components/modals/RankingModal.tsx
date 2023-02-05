@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { BaseModal } from './BaseModal'
 
 import { getRanking, rankeredUser } from '../../lib/firebaseActions'
